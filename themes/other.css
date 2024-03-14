@@ -1,0 +1,149 @@
+/* Reset and Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Page Styles */
+.pages {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  position: relative;
+}
+
+/* Login Page Styles */
+.login.page {
+  background-color: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login.page:hover {
+  background-color: #444; /* Darken the background on hover */
+}
+
+.login.page .form {
+  text-align: center;
+  transition: opacity 0.5s ease; /* Fade in/out effect on form elements */
+  opacity: 1;
+}
+
+.login.page:hover .form {
+  opacity: 0.8;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #00ffcc;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.2em;
+  max-width: 400px;
+  width: 80%;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.login.page .form .usernameInput:focus {
+  border-color: #55ffee; /* Change border color on focus */
+}
+
+.login.page .title {
+  font-size: 2.5em;
+  color: #00ffcc;
+  margin-bottom: 20px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Chat Page Styles */
+.chat.page {
+  display: none;
+}
+
+/* Font Styles */
+.messages {
+  font-size: 1.2em;
+}
+
+.inputMessage {
+  font-size: 1em;
+}
+
+.log {
+  color: gray;
+  font-size: 0.7em;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages Styles */
+.chatArea {
+  height: calc(100% - 60px);
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* Input Styles */
+.inputMessage {
+  border: 2px solid #00ffcc;
+  border-radius: 30px;
+  bottom: 20px;
+  height: 50px;
+  outline: none;
+  padding: 0 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: #333;
+  color: #00ffcc;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.inputMessage:hover {
+  border-color: #fff;
+}

@@ -1,0 +1,171 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Necessary for absolute positioning of overlay */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00NTYtMDEwZC14LmpwZw.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur(10px); /* Adjust blur intensity */
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Page Styles */
+
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Login Page Styles */
+
+.login.page {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darkened effect */
+  border-radius: 10px;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -50px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #00ffcc;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.login.page .title {
+  font-size: 2.5em;
+  color: #00ffcc;
+}
+
+.login.page .usernameInput {
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+
+.login.page .title, .login.page .usernameInput {
+  color: #00ffcc;
+  font-weight: 100;
+}
+
+/* Chat Page Styles */
+
+.chat.page {
+  display: none;
+}
+
+/* Font Styles */
+
+.messages {
+  font-size: 1.5em;
+}
+
+.inputMessage {
+  font-size: 1em;
+}
+
+.log {
+  color: gray;
+  font-size: 0.7em;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages Styles */
+
+.chatArea {
+  height: calc(100% - 60px);
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* Input Styles */
+
+.inputMessage {
+  border: 10px solid #FCBCED;
+  border-radius: 15px;
+  bottom: 10%;
+  height: 60px;
+  left: 50%;
+  outline: none;
+  padding-left: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust the width as needed */
+  background-color: #AE81DA;
+  color: #00ffcc;
+}
+
+.inputMessage:hover {
+  border-color: #00ffcc;
+}
